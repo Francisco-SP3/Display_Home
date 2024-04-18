@@ -31,12 +31,12 @@ const NavBar: React.FC<NBProps> = ({ page }) => {
               className="object-scale-down h-16" />
           </button>
 
-          <button onClick={() => handleClick("visual")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto h-24" + (pathName == "/visual" ? " bg-[#a4abc8]" : " bg-[#707588]")}>
+          <button onClick={() => handleClick("visual")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto h-24" + (pathName.slice(0,7) == "/visual" ? " bg-[#a4abc8]" : " bg-[#707588]")}>
             <FaEye className="text-5xl ml-1 font-semibold text-neutral-100 dark:text-neutral-200" href="#"
             />
           </button>
 
-          <button onClick={() => handleClick("control")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-4 px-8 flex-auto h-24" + (pathName == "/control" ? " bg-[#a4abc8]" : " bg-[#707588]")}>
+          <button onClick={() => handleClick("control")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-4 px-8 flex-auto h-24" + (pathName.slice(0,8) == "/control" ? " bg-[#a4abc8]" : " bg-[#707588]")}>
             <GiConsoleController className="text-6xl ml-2 font-semibold text-neutral-100" href="#/control"
             />
           </button>
